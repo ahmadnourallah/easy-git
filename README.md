@@ -12,11 +12,11 @@ git clone https://github.com/ahmadnourallah/easy-git.git
 3- After give permission to all tools files execute the install file and wait to finish.<br><br>
 4- Finally, type in the terminal seframework to run the tools.
 # Features
-[x] Download repo from gitthub.<br>
-[x] Upload project to github easily.<br>
-[x] Show all commit and status of project file.<br>
-[x] Auto debug for the wrong commands.<br>
-[x] Easy panel to control all your project files.<br>
+1- Download repo from gitthub.<br>
+2- Upload project to github easily.<br>
+3- Show all commit and status of project file.<br>
+4- Auto debug for the wrong commands.<br>
+5- Easy panel to control all your project files.<br>
 ### And more ....<br>
 # Call US
 ####Ahmad Nourallah:
