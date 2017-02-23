@@ -1,4 +1,4 @@
-# Easy-Git ![Build Status](http://webscan.esy.es/web.svg)<br>
+# Easy-Git ![Build Status](http://webscan.esy.es/web.svg)<br><br>
 This tool works to shorten the time to programer and entrepreneurs to upload their products to the site github
 <img src="http://webscan.esy.es/easy-git.png"><br><br>
 IT is tools to managed your github account from terminal.<br>
