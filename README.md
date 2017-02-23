@@ -20,5 +20,5 @@ git clone https://github.com/ahmadnourallah/easy-git.git
 ### And more ....<br>
 # Call US
 ####Ahmad Nourallah:
-Email: ahmadnurallah@gmail.com
+Email: ahmadnurallah@gmail.com<br>
 Facebook: fb.com/ahmadnurallah
