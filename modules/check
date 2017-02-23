@@ -1,0 +1,14 @@
+#!/bin/bash
+if [[ "$action" == https://github.com/*/* ]] || [[ "$action" == *github.com/*/* ]]
+then
+wget $action -O /root/.easy-git/output.txt &> /dev/null
+if [ "$?" == 0 ]
+then
+echo -e $BWhite"[$(echo -e $BYellow"OK")$(echo -e $BWhite"] The repositorie is exist")"
+else
+echo -e $BWhite"[$(echo -e $BRed"ERROR")$(echo -e $BWhite"] The repositorie is not exist")"
+fi
+else
+echo -e $BWhite"[$(echo -e $BRed"ERROR")$(echo -e $BWhite"] The repositorie is not exist")"
+fi
+rm /root/.easy-git/output.txt &> /dev/null

@@ -1,0 +1,16 @@
+#!/bin/bash
+echo
+echo -e $BYellow"[INFO] $(echo -e $BWhite "Wail will download the repositorie.")"
+git clone $action &> /dev/null
+if [ "$?" == 0 ]
+then
+echo 
+echo -e $BYellow"[OK] $(echo -e $BWhite "Successfully download repositorie.")"
+echo 
+echo -e $BWhite "                          The repositorie its in the current directory."
+echo
+else
+echo
+echo -e $BRed"[ERROR] $(echo -e $BWhite "Enter the correct repositorie url.")" 
+echo 
+fi

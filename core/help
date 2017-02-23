@@ -1,0 +1,44 @@
+#!/bin/bash
+## Colors
+Black='\e[0;30m'        # Black
+Red='\e[0;31m'          # Red
+Green='\e[0;32m'        # Green
+Yellow='\e[0;33m'       # Yellow
+Blue='\e[0;34m'         # Blue
+Purple='\e[0;35m'       # Purple
+Cyan='\e[0;36m'         # Cyan
+White='\e[0;37m'        # White
+
+# Bold
+BBlack='\e[1;30m'       # Black
+BRed='\e[1;31m'         # Red
+BGreen='\e[1;32m'       # Green
+BYellow='\e[1;33m'      # Yellow
+BBlue='\e[1;34m'        # Blue
+BPurple='\e[1;35m'      # Purple
+BCyan='\e[1;36m'        # Cyan
+BWhite='\e[1;37m'       # White
+echo 
+echo -e $BBlue "Git Options:"
+echo
+echo -e $BGreen "   download [Git Url]     $(echo -e $BWhite "  use to download repositories  from github")"
+echo -e $BGreen "   upload                 $(echo -e $BWhite "  use to start upload repositorie in work directory ")"
+echo -e $BGreen "   make                   $(echo -e $BWhite "  use to make git init in work directory")"
+echo -e $BGreen "   config                 $(echo -e $BWhite "  use to start configure git init file")"
+echo -e $BGreen "   status                 $(echo -e $BWhite "  use to show repositorie status")"
+echo -e $BGreen "   logs                   $(echo -e $BWhite "  use to show repositorie logs")"
+echo -e $BGreen "   add [file name or *]   $(echo -e $BWhite "  use to add file to repositorie range")"
+echo -e $BGreen "   commit [commit word]   $(echo -e $BWhite "  use to add commit to repositories  files")"
+echo -e $BGreen "   check [Git Url]        $(echo -e $BWhite "  use to check if git repositorie are existing")"
+echo -e $BGreen "   commit show            $(echo -e $BWhite "  use to show commit log")"
+echo -e $BGreen "   git [git command]      $(echo -e $BWhite "  use to call git tool.")"
+echo
+echo -e $BBlue "System Options:"
+echo
+echo -e $BGreen "   exec                   $(echo -e $BWhite "  use to execute bash command")"
+echo -e $BGreen "   clear                  $(echo -e $BWhite "  use to clear the screen")"
+echo -e $BGreen "   reset                  $(echo -e $BWhite "  use to reset the screen")"
+echo -e $BGreen "   help                   $(echo -e $BWhite "  use to show this message")"
+echo -e $BGreen "   verison                $(echo -e $BWhite "  use to show tools verison")"
+echo -e $BGreen "   cd                     $(echo -e $BWhite "  use to change directory")"
+echo 

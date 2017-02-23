@@ -1,0 +1,8 @@
+#!/bin/bash
+cd $action &> /dev/null
+if [ "$?" == 0 ]
+then
+echo -e $BYellow"pwd:$(echo -e $BWhite $(pwd))"
+else
+echo -e $BWhite"[$(echo -e $BRed"ERROR")$(echo -e $BWhite"] Directory not found.")"
+fi

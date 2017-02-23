@@ -1,0 +1,23 @@
+#!/bin/bash
+git init &> /dev/null
+if [ "$?" == 0 ]
+then
+echo
+echo -e $BWhite"[$(echo -e $BYellow"OK")$(echo -e $BWhite"] Make git init")"
+echo
+read -p "$(echo -e $BWhite"["$(echo -e $BYellow"INFO")$(echo -e $BWhite"] Are you need start configure it [Y|N]:")) " qes
+if [ "$qes" == "Y" ] || [ "$qes" == "Yes" ] || [ "$qes" == "YES" ] || [ "$qes" == "y" ] 
+then
+source /etc/easy-git/modules/config
+elif [ "$qes" == "N" ] || [ "$qes" == "No" ] || [ "$qes" == "NO" ] || [ "$qes" == "n" ]
+then
+echo
+else
+echo
+echo -e $BBlue"[*] $(echo -e $BWhite"Options Not Found")"
+echo
+fi
+
+else
+echo -e $BWhite"[$(echo -e $BRed"ERROR")$(echo -e $BWhite"] Make git init")"
+fi

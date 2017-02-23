@@ -1,0 +1,13 @@
+#!/bin/bash
+git log &> /dev/null
+if [ "$?" == 0 ]
+then
+echo
+echo -e $BWhite"[$(echo -e $BYellow"INFO")$(echo -e $BWhite"] Type q to quit from logs view.")"
+echo 
+git log
+else
+echo
+git log
+echo
+fi

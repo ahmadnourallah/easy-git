@@ -1,0 +1,102 @@
+#!/bin/bash
+if [[ "$par" == ad* ]] || [[ "$par" == AD* ]] || [[ "$par" == *dd ]] || [[ "$par" == *DD ]]
+then
+echo
+echo -e $BBlue"[*] $(echo -e $BWhite"Options Not Found")"    
+echo
+echo -e $BWhite"[$(echo -e $BYellow"INFO")$(echo -e $BWhite"] Maybe you mean (add).")"
+echo
+elif [[ "$par" == con* ]] || [[ "$par" == CON* ]]
+then
+echo
+echo -e $BBlue"[*] $(echo -e $BWhite"Options Not Found")"    
+echo
+echo -e $BWhite"[$(echo -e $BYellow"INFO")$(echo -e $BWhite"] Maybe you mean (config).")"
+echo
+elif [[ "$par" == com* ]] || [[ "$par" == COM* ]]
+then
+echo
+echo -e $BBlue"[*] $(echo -e $BWhite"Options Not Found")"    
+echo
+echo -e $BWhite"[$(echo -e $BYellow"INFO")$(echo -e $BWhite"] Maybe you mean (commit).")"
+echo
+elif [[ "$par" == ch* ]] ||[[ "$par" == CH* ]] || [[ "$par" == *eck ]] || [[ "$par" == *ck ]]
+then
+echo
+echo -e $BBlue"[*] $(echo -e $BWhite"Options Not Found")"    
+echo
+echo -e $BWhite"[$(echo -e $BYellow"INFO")$(echo -e $BWhite"] Maybe you mean (check).")"
+echo 
+elif [[ "$par" == co* ]] || [[ "$par" == CO* ]]
+then
+echo
+echo -e $BBlue"[*] $(echo -e $BWhite"Options Not Found")"    
+echo
+echo -e $BWhite"[$(echo -e $BYellow"INFO")$(echo -e $BWhite"] Maybe you mean (config, commit).")"
+echo
+elif [[ "$par" == do* ]] || [[ "$par" == DO* ]]
+then
+echo
+echo -e $BBlue"[*] $(echo -e $BWhite"Options Not Found")"    
+echo
+echo -e $BWhite"[$(echo -e $BYellow"INFO")$(echo -e $BWhite"] Maybe you mean (download).")"
+echo
+elif [[ "$par" == *ad ]] || [[ "$par" == AD* ]]
+then
+echo
+echo -e $BBlue"[*] $(echo -e $BWhite"Options Not Found")"    
+echo
+echo -e $BWhite"[$(echo -e $BYellow"INFO")$(echo -e $BWhite"] Maybe you mean (upload).")"
+echo
+elif [[ "$par" == h* ]]
+then
+echo
+echo -e $BBlue"[*] $(echo -e $BWhite"Options Not Found")"    
+echo
+echo -e $BWhite"[$(echo -e $BYellow"INFO")$(echo -e $BWhite"] Maybe you mean (help, check).")"
+echo
+elif [[ "$par" == *e* ]]
+then
+echo
+echo -e $BBlue"[*] $(echo -e $BWhite"Options Not Found")"    
+echo
+echo -e $BWhite"[$(echo -e $BYellow"INFO")$(echo -e $BWhite"] Maybe you mean (check).")"
+echo
+elif [[ "$par" == he* ]] || [[ "$par" == h*lp ]] 
+then
+echo
+echo -e $BBlue"[*] $(echo -e $BWhite"Options Not Found")"    
+echo
+echo -e $BWhite"[$(echo -e $BYellow"INFO")$(echo -e $BWhite"] Maybe you mean (help).")"
+echo
+elif [[ "$par" == *ke ]] || [[ "$par" == *KE ]] ||  [[ "$par" == *ake ]] || [[ "$par" == *AKE ]] 
+then
+echo
+echo -e $BBlue"[*] $(echo -e $BWhite"Options Not Found")"    
+echo
+echo -e $BWhite"[$(echo -e $BYellow"INFO")$(echo -e $BWhite"] Maybe you mean (make).")"
+echo
+elif [[ "$par" == downl* ]] || [[ "$par" == DOWNL* ]] 
+then
+echo
+echo -e $BBlue"[*] $(echo -e $BWhite"Options Not Found")"    
+echo
+echo -e $BWhite"[$(echo -e $BYellow"INFO")$(echo -e $BWhite"] Maybe you mean (download).")"
+echo 
+elif [[ "$par" == *load ]] || [[ "$par" == LOAD* ]]
+then
+echo
+echo -e $BBlue"[*] $(echo -e $BWhite"Options Not Found")"    
+echo
+echo -e $BWhite"[$(echo -e $BYellow"INFO")$(echo -e $BWhite"] Maybe you mean (download, upload).")"
+echo  
+elif [[ "$par" == *ison ]] || [[ "$par" == *ISON ]] || [[ "$par" == ver* ]] || [[ "$par" == VER* ]]
+then
+echo
+echo -e $BBlue"[*] $(echo -e $BWhite"Options Not Found")"    
+echo
+echo -e $BWhite"[$(echo -e $BYellow"INFO")$(echo -e $BWhite"] Maybe you mean (verison).")"
+echo
+else
+echo -e $BBlue"[*] $(echo -e $BWhite"Options Not Found")" 
+fi

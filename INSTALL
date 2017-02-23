@@ -1,0 +1,104 @@
+#!/bin/bash
+clear
+Black='\e[0;30m' # Black
+Red='\e[0;31m' # Red
+Green='\e[0;32m' # Green
+Yellow='\e[0;33m' # Yellow
+Blue='\e[0;34m' # Blue
+Purple='\e[0;35m' # Purple
+Cyan='\e[0;36m' # Cyan
+White='\e[0;37m' # White
+# Bold
+BBlack='\e[1;30m' # Black
+BRed='\e[1;31m' # Red
+BGreen='\e[1;32m' # Green
+BYellow='\e[1;33m' # Yellow
+BBlue='\e[1;34m' # Blue
+BPurple='\e[1;35m' # Purple
+BCyan='\e[1;36m' # Cyan
+BWhite='\e[1;37m' # White
+echo
+#!/bin/bash
+echo -e $Black"       ########    ###     ######  ##    ##          ######   #### ########" 
+echo "       ##         ## ##   ##    ##  ##  ##          ##    ##   ##     ##"    
+echo "       ##        ##   ##  ##         ####           ##         ##     ##"    
+echo "       ######   ##     ##  ######     ##   #######  ##   ####  ##     ##"    
+echo "       ##       #########       ##    ##   	    ##    ##   ##     ##"    
+echo "       ##       ##     ## ##    ##    ##            ##    ##   ##     ##"    
+echo "       ######## ##     ##  ######     ##             ######   ####    ##"    
+echo	
+echo
+echo -e $BYellow "Note: $(echo -e $BWhite"You shouldnt remove any file from tools after install finish.")"
+echo -e $BYellow "Note: $(echo -e $BWhite"You should run the install plugin from the tools directory.")"
+echo -e $BYellow "Note: $(echo -e $BWhite"the tools need root permissions.")"
+echo
+echo "$(echo -e $BBlue"Easy-Git > " )$(echo -e $BWhite"Welcome to easy-git install plugin")"
+read -p "$(echo -e $BBlue"Easy-Git > " )$(echo -e $BWhite"Are you accept install tools on your computer [Y|N]:") " accept
+if [ "$accept" == "Y" ] || [ "$accept" == "y" ] || [ "$accept" == "yes" ] || [ "$accept" == "Yes" ]
+then
+if [ "$EUID" == 0 ]
+then
+echo -e $BWhite"[$(echo -e $BYellow"ok")$(echo -e $BWhite"] Get root permissions")"
+else
+echo
+echo -e $BWhite"[$(echo -e $BRed"error")$(echo -e $BWhite"] Get root permissions")"
+echo
+exit
+fi
+mkdir /root/.easy-git/ &> /dev/null
+if [ "$?" == 0 ]
+then
+echo -e $BWhite"[$(echo -e $BYellow"ok")$(echo -e $BWhite"] Make tools configure directory in /root/.easy-git/")"
+else
+echo -e $BWhite"[$(echo -e $BRed"error")$(echo -e $BWhite"] Make tools configure directory in /root/.easy-git/")"
+fi
+sleep 0.2s
+cp README.md /root/.easy-git/ &> /dev/null
+if [ "$?" == 0 ]
+then
+echo -e $BWhite"[$(echo -e $BYellow"ok")$(echo -e $BWhite"] Copy README.md to /root/.easy-git/")"
+else
+echo -e $BWhite"[$(echo -e $BRed"error")$(echo -e $BWhite"] Copy README.md to /root/.easy-git/")"
+fi
+sleep 0.2s
+mkdir /etc/easy-git/ &> /dev/null
+if [ "$?" == 0 ]
+then
+echo -e $BWhite"[$(echo -e $BYellow"ok")$(echo -e $BWhite"] Make tools folder in /etc/easy-git/")"
+else
+echo -e $BWhite"[$(echo -e $BRed"error")$(echo -e $BWhite"] Make tools folder in /etc/easy-git/")"
+fi
+sleep 0.2s
+cp -r core/ modules/ remove /etc/easy-git/ &> /dev/null
+if [ "$?" == 0 ]
+then
+echo -e $BWhite"[$(echo -e $BYellow"ok")$(echo -e $BWhite"] Copy tools file to /etc/easy-git/")"
+else
+echo -e $BWhite"[$(echo -e $BRed"error")$(echo -e $BWhite"] Copy tools file to /etc/easy-git/")"
+fi
+sleep 0.2s
+cp easy-git modules/git /bin/ &> /dev/null
+if [ "$?" == 0 ]
+then
+echo -e $BWhite"[$(echo -e $BYellow"ok")$(echo -e $BWhite"] Copy tools script to /bin/")"
+else
+echo -e $BWhite"[$(echo -e $BRed"error")$(echo -e $BWhite"] Copy tools script to /bin/")"
+fi
+sleep 0.2s
+cd ..
+rm -r easy-git*/
+if [ "$?" == 0 ]
+then
+echo -e $BWhite"[$(echo -e $BYellow"ok")$(echo -e $BWhite"] Remove install file from computer")"
+echo
+echo -e $BYellow "Note: $(echo -e $BWhite"Now Type easy-git in terminal to execute the script")"
+echo
+else
+echo -e $BWhite"[$(echo -e $BRed"error")$(echo -e $BWhite"] Remove install file from computer")"
+fi
+else
+echo
+echo -e $BRed "Good bye $(echo -e $BWhite".......")"
+echo
+exit
+fi

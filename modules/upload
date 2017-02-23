@@ -1,0 +1,26 @@
+#!/bin/bash
+echo
+read -p "$(echo -e $BWhite"["$(echo -e $BYellow"INFO")$(echo -e $BWhite"] Are you make the init file and config it [Y|N]:")) " qes
+if [ "$qes" == "Y" ] || [ "$qes" == "Yes" ] || [ "$qes" == "YES" ] || [ "$qes" == "y" ] 
+then
+echo
+read -p "$(echo -e $BBlue"Easy-Git > ")$(echo -e $BGreen "Enter the remote name (ex: origin): ")$(echo -e $BWhite)" remote
+echo
+echo -e $BWhite"[$(echo -e $BYellow"INFO")$(echo -e $BWhite"] Start Upload file to github")"
+echo
+git push -f $remote 
+if [ "$?" == 0 ]
+then
+echo -e $BWhite"[$(echo -e $BYellow"OK")$(echo -e $BWhite"] Upload repositorie to github.")"
+else
+echo -e $BWhite"[$(echo -e $BRed"ERROR")$(echo -e $BWhite"] Upload repositorie to github.")"
+echo
+fi
+elif [ "$qes" == "N" ] || [ "$qes" == "No" ] || [ "$qes" == "NO" ] || [ "$qes" == "n" ]
+then
+source /etc/easy-git/modules/config
+else
+echo
+echo -e $BBlue"[*] $(echo -e $BWhite"Options Not Found")"
+echo
+fi

@@ -1,0 +1,26 @@
+#!/bin/bash
+origin="origin"
+http_postbuffer=12M
+read -p "$(echo -e $BBlue"Easy-Gite > ")$(echo -e $BWhite"Enter the creator name: ")" user_name
+read -p "$(echo -e $BBlue"Easy-Gite > ")$(echo -e $BWhite"Enter the creator email: ")" user_email
+read -p "$(echo -e $BBlue"Easy-Gite > ")$(echo -e $BWhite"Enter the creator http postbuffer (default 12M): ")" http_postbuffer
+read -p "$(echo -e $BBlue"Easy-Gite > ")$(echo -e $BWhite"Enter the repo add name (defualt origin): ")" origin
+read -p "$(echo -e $BBlue"Easy-Gite > ")$(echo -e $BWhite"Enter the repo url: ")" repo_url
+git config --global user.name "$user_name" &>/dev/null
+git config --global user.email "$user_email" &>/dev/null
+git config --global http.postbuffer $http_postbuffer &>/dev/null
+git remote add $origin $repo_url
+if [ "$?" == 0 ]
+then
+echo -e $BWhite"[$(echo -e $BYellow"OK")$(echo -e $BWhite"] Configure complete.")"
+read -p "$(echo -e $BBlue"Easy-Gite > ")$(echo -e $BWhite"Are you wante start upload repo [Y|N]: ")" qes
+if [ "$qes" == "Y" ] || [ "$qes" == "Yes" ] || [ "$qes" == "YES" ] || [ "$qes" == "y" ]
+then
+source /etc/easy-git/modules/upload
+elif [ "$qes" == "N" ] || [ "$qes" == "No" ] || [ "$qes" == "NO" ] || [ "$qes" == "n" ]
+then
+printf ""
+fi
+else
+echo -e $BWhite"[$(echo -e $BRed"ERROR")$(echo -e $BWhite"] Configure complete.")"
+fi
